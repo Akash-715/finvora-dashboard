@@ -1,0 +1,104 @@
+.navbar-light {
+  --nav-bg: #ffffff;
+  --nav-text: #111827;
+  --nav-border: #dbe4ea;
+  --nav-shadow: rgba(15, 23, 42, 0.08);
+}
+
+.navbar-dark {
+  --nav-bg: #07111f;
+  --nav-text: #f8fafc;
+  --nav-border: #16263c;
+  --nav-shadow: rgba(0, 0, 0, 0.45);
+}
+
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 24px;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 6px 18px var(--nav-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 997;
+  font-family: 'poppins';
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hamburger-btn {
+  border: none;
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 8px 22px rgba(20, 184, 166, 0.25);
+  flex-shrink: 0;
+}
+
+.hamburger-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+.company-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--nav-text);
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .top-navbar {
+    padding: 14px 18px;
+  }
+
+  .hamburger-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .company-name {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-navbar {
+    padding: 12px 14px;
+  }
+
+  .navbar-left {
+    gap: 10px;
+  }
+
+  .hamburger-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+
+  .company-name {
+    font-size: 20px;
+  }
+}

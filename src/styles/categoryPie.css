@@ -1,0 +1,85 @@
+.pie-card.light {
+  --card-bg: #ffffff;
+  --text: #111827;
+  --border: #dbe4ea;
+  --subtext: #6b7280;
+  --shadow: rgba(15, 23, 42, 0.08);
+}
+
+.pie-card.dark {
+  --card-bg: #0b1728;
+  --text: #f8fafc;
+  --border: #16263c;
+  --subtext: #94a3b8;
+  --shadow: rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   MAIN PIE CARD
+========================= */
+.pie-card {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 8px 24px var(--shadow);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* Title */
+.pie-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+/* Chart wrapper */
+.chart-card {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Recharts legend fix */
+.recharts-legend-wrapper {
+  width: 100% !important;
+  overflow: hidden;
+  left: 0 !important;
+}
+
+/* Legend wrap */
+.recharts-default-legend {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+/* Legend item */
+.recharts-legend-item {
+  font-size: 12px;
+  margin: 0 6px !important;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .pie-card {
+    padding: 18px 14px;
+    border-radius: 18px;
+  }
+
+  .pie-title {
+    font-size: 18px;
+  }
+
+  .recharts-default-legend {
+    gap: 6px;
+  }
+
+  .recharts-legend-item {
+    font-size: 11px;
+  }
+}

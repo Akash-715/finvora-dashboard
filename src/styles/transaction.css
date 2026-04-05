@@ -1,0 +1,203 @@
+/* =========================
+   TRANSACTION THEME
+========================= */
+.tx-light {
+  --tx-card-bg: #ffffff;
+  --tx-text: #111827;
+  --tx-border: #dbe4ea;
+  --tx-subtext: #6b7280;
+  --tx-hover-row: rgba(20, 184, 166, 0.06);
+  --tx-input-bg: #ffffff;
+  --tx-teal: #14b8a6;
+  --tx-teal-dark: #0f766e;
+  --tx-red: #ef4444;
+  --tx-shadow: rgba(15, 23, 42, 0.08);
+}
+
+.tx-dark {
+  --tx-card-bg: #0b1728;
+  --tx-text: #f8fafc;
+  --tx-border: #16263c;
+  --tx-subtext: #94a3b8;
+  --tx-hover-row: rgba(20, 184, 166, 0.08);
+  --tx-input-bg: #081121;
+  --tx-teal: #14b8a6;
+  --tx-teal-dark: #0f766e;
+  --tx-red: #f87171;
+  --tx-shadow: rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   CARD
+========================= */
+.tx-card {
+  background: var(--tx-card-bg);
+  border-radius: 22px;
+  padding: 18px;
+  border: 1px solid var(--tx-border);
+  box-shadow: 0 8px 24px var(--tx-shadow);
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.tx-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tx-export-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--tx-teal), var(--tx-teal-dark));
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 8px 22px rgba(20, 184, 166, 0.25);
+}
+
+.tx-export-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+.tx-search {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid var(--tx-border);
+  padding: 10px 12px;
+  border-radius: 14px;
+  outline: none;
+  transition: 0.2s;
+  background: var(--tx-input-bg);
+  color: var(--tx-text);
+}
+
+.tx-search::placeholder {
+  color: var(--tx-subtext);
+}
+
+.tx-search:focus {
+  border-color: var(--tx-teal);
+  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+}
+
+/* =========================
+   TABLE
+========================= */
+.tx-table-wrapper {
+  overflow-x: auto;
+  max-height: 650px;
+  overflow-y: auto;
+  border-radius: 16px;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: var(--tx-text);
+}
+
+.tx-table thead {
+  background: linear-gradient(135deg, var(--tx-teal), var(--tx-teal-dark));
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.tx-table th {
+  text-align: left;
+  padding: 14px 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.tx-table td {
+  padding: 14px 12px;
+}
+
+.tx-row {
+  border-bottom: 1px solid var(--tx-border);
+  transition: 0.2s;
+}
+
+.tx-row:hover {
+  background: var(--tx-hover-row);
+}
+
+/* =========================
+   BADGES
+========================= */
+.tx-badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.tx-badge.income {
+  background: rgba(20, 184, 166, 0.15);
+  color: var(--tx-teal);
+}
+
+.tx-badge.expense {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--tx-red);
+}
+
+/* =========================
+   AMOUNT
+========================= */
+.tx-amount.income {
+  color: var(--tx-teal);
+  font-weight: 700;
+}
+
+.tx-amount.expense {
+  color: var(--tx-red);
+  font-weight: 700;
+}
+
+/* =========================
+   EMPTY
+========================= */
+.tx-no-data {
+  text-align: center;
+  padding: 30px;
+  color: var(--tx-subtext);
+  font-weight: 500;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+.tx-delete-btn {
+  border: none;
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--tx-red);
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 16px;
+}
+
+.tx-delete-btn:hover {
+  background: var(--tx-red);
+  color: white;
+  transform: translateY(-1px);
+}

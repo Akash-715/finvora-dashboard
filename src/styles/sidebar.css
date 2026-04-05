@@ -1,0 +1,229 @@
+.sidebar-light {
+  --sb-bg: #ffffff;
+  --sb-text: #111827;
+  --sb-subtext: #6b7280;
+  --sb-border: #dbe4ea;
+  --sb-hover: #f1f5f9;
+  --sb-active: linear-gradient(135deg, #14b8a6, #0f766e);
+  --sb-shadow: rgba(15, 23, 42, 0.08);
+}
+
+.sidebar-dark {
+  --sb-bg: #07111f;
+  --sb-text: #f8fafc;
+  --sb-subtext: #94a3b8;
+  --sb-border: #16263c;
+  --sb-hover: #081121;
+  --sb-active: linear-gradient(135deg, #14b8a6, #0f766e);
+  --sb-shadow: rgba(0, 0, 0, 0.45);
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+  font-family: 'poppins';
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  max-width: 85vw;
+  height: 100dvh;
+  background: var(--sb-bg);
+  color: var(--sb-text);
+  border-right: 1px solid var(--sb-border);
+  box-shadow: 4px 0 18px var(--sb-shadow);
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 999;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'poppins';
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Top */
+.sidebar-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 12px;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--sb-text);
+  line-height: 1.2;
+}
+
+.sidebar-close-btn {
+  border: none;
+  background: transparent;
+  color: var(--sb-text);
+  font-size: 26px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Menu */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  font-family: 'poppins';
+}
+
+.sidebar-link {
+  border: none;
+  background: transparent;
+  color: var(--sb-text);
+  padding: 13px 15px;
+  border-radius: 14px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+  width: 100%;
+  font-family: 'poppins';
+}
+
+.sidebar-link:hover {
+  background: var(--sb-hover);
+}
+
+.sidebar-link.active {
+  background: var(--sb-active);
+  color: white;
+  box-shadow: 0 8px 20px rgba(20, 184, 166, 0.28);
+}
+
+/* Bottom */
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  background: var(--sb-bg);
+  position: sticky;
+  bottom: 0;
+}
+
+.sidebar-theme-btn {
+  width: 100%;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  color: white;
+  border: none;
+  cursor: pointer;
+  min-height: 46px;
+}
+
+.sidebar-role-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.role-btn {
+  flex: 1;
+  border: 1px solid var(--sb-border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  min-height: 46px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--sb-hover);
+  color: var(--sb-text);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.role-btn:hover {
+  border-color: #14b8a6;
+}
+
+.role-btn.active {
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 20px rgba(20, 184, 166, 0.28);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 85vw;
+    max-width: 320px;
+    padding: 22px 16px;
+  }
+
+  .sidebar-logo {
+    font-size: 22px;
+  }
+
+  .sidebar-link {
+    font-size: 15px;
+    padding: 13px 14px;
+  }
+
+  .sidebar-theme-btn,
+  .role-btn {
+    font-size: 14px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 88vw;
+    max-width: 300px;
+    padding: 20px 14px;
+  }
+
+  .sidebar-logo {
+    font-size: 20px;
+  }
+
+  .sidebar-close-btn {
+    font-size: 24px;
+  }
+
+  .sidebar-link {
+    font-size: 14px;
+    padding: 12px 13px;
+  }
+
+  .sidebar-theme-btn,
+  .role-btn {
+    font-size: 13px;
+    padding: 11px 12px;
+    min-height: 42px;
+  }
+
+  .sidebar-role-buttons {
+    flex-direction: column;
+  }
+}

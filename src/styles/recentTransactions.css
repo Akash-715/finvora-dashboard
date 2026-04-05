@@ -1,0 +1,118 @@
+.recent-light {
+  --recent-card-bg: #ffffff;
+  --recent-text: #111827;
+  --recent-subtext: #6b7280;
+  --recent-border: #dbe4ea;
+  --recent-shadow: rgba(15, 23, 42, 0.08);
+  --recent-soft: #f8fafc;
+  --recent-teal: #14b8a6;
+  --recent-red: #ef4444;
+}
+
+.recent-dark {
+  --recent-card-bg: #0b1728;
+  --recent-text: #f8fafc;
+  --recent-subtext: #94a3b8;
+  --recent-border: #16263c;
+  --recent-shadow: rgba(0, 0, 0, 0.45);
+  --recent-soft: #081121;
+  --recent-teal: #14b8a6;
+  --recent-red: #f87171;
+}
+
+.recent-card {
+  background: var(--recent-card-bg);
+  border-radius: 22px;
+  padding: 20px;
+  border: 1px solid var(--recent-border);
+  box-shadow: 0 8px 24px var(--recent-shadow);
+  transition: 0.3s ease;
+}
+
+.recent-header {
+  margin-bottom: 18px;
+}
+
+.recent-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--recent-text);
+}
+
+.recent-header p {
+  font-size: 14px;
+  color: var(--recent-subtext);
+  margin-top: 4px;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--recent-soft);
+  border: 1px solid var(--recent-border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  transition: 0.2s ease;
+}
+
+.recent-item:hover {
+  transform: translateY(-2px);
+}
+
+.recent-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recent-left h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--recent-text);
+  margin: 0;
+}
+
+.recent-left span {
+  font-size: 13px;
+  color: var(--recent-subtext);
+}
+
+.recent-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.recent-dot.income {
+  background: var(--recent-teal);
+}
+
+.recent-dot.expense {
+  background: var(--recent-red);
+}
+
+.recent-amount {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.recent-amount.income {
+  color: var(--recent-teal);
+}
+
+.recent-amount.expense {
+  color: var(--recent-red);
+}
+
+.recent-empty {
+  color: var(--recent-subtext);
+  text-align: center;
+  padding: 20px 0;
+}

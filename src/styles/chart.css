@@ -1,0 +1,31 @@
+.chart-card.light {
+  --card-bg: #ffffff;
+  --text: #111827;
+  --border: #dbe4ea;
+  --shadow: rgba(15, 23, 42, 0.08);
+}
+
+.chart-card.dark {
+  --card-bg: #0b1728;
+  --text: #f8fafc;
+  --border: #16263c;
+  --shadow: rgba(0, 0, 0, 0.45);
+}
+
+.chart-card {
+  background: var(--card-bg);
+  border-radius: 22px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px var(--shadow);
+  transition: 0.3s ease;
+  font-size: 12px;
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+
+}
